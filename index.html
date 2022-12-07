@@ -1,0 +1,50 @@
+<!--
+    True Yuen
+    Web Development
+    Periods 7-8 (Even)
+    12/7/2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control System</title>
+    <script>
+        r = 00100;
+        rw = 00010;
+        rwx = 00001;
+        myP = r;
+
+        console.log(myP);
+
+        console.log("Does this user have read permissions?")
+        if (myP & (r | rw | rwx)) {
+            console.log("Yes, they have read permissions.");
+        } else {
+            console.log("No, they don't have read permissions.");
+        }
+        //myP = r;
+        
+        console.log("Does this user have write permissions?")
+        if (myP & (rw | rwx)) {
+            console.log("Yes, they have write permissions.");
+        } else {
+            console.log("No, they don't have write permissions.")
+        }
+        //myP = rw;
+
+        console.log("Does this user have execute permissions?")
+        if (myP & rwx) {
+            console.log("Yes, they have execute permissions.");
+        } else {
+            console.log("No, they don't have execute permissions");
+        }
+        //myP = rwx;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
